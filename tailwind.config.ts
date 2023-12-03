@@ -8,7 +8,11 @@ export default {
         "./node_modules/flowbite/**/*.js",
     ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            'sans': ['Plus Jakarta Sans']
+        }
+    },
   },
   plugins: [flowbitePlugin],
 } satisfies Config
