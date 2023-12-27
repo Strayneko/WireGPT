@@ -15,9 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('index')->middleware('auth');
 
-Route::prefix('auth')->name('auth.')->group(function (){
+Route::prefix('auth')->middleware('guest')->name('auth.')->group(function () {
     Route::get('login', \App\Livewire\Auth\Login\Index::class)->name('login');
     Route::get('register', \App\Livewire\Auth\Register\Index::class)->name('register');
 });
+
