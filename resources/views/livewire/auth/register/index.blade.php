@@ -1,3 +1,1 @@
-<div>
-    {{-- Care about people's approval and you will be their prisoner. --}}
-</div>
+@include('livewire.auth.partials._auth-wrapper', ['type' => 'register'])

@@ -8,16 +8,6 @@ use Livewire\Component;
 
 class Index extends Component
 {
-    public LoginForm $form;
-
-    /**
-     * @return void
-     */
-    public function authenticate(): void
-    {
-        $this->form->validate();
-    }
-
     #[Title('Login')]
     public function render()
     {

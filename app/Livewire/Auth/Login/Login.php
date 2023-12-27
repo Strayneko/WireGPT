@@ -24,7 +24,12 @@ class Login extends Component
 
         if (!$this->form->attemptLogin()) return;
 
-        $this->redirect('/', navigate: true);
+        $this->redirect(route('index'), navigate: true);
+    }
+
+    public function goToRegister(): void
+    {
+        $this->redirect(route('auth.register'), true);
     }
 
     /**
